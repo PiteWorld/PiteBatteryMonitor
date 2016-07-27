@@ -6,6 +6,7 @@ import com.example.pcs.PCSMainActivity;
 import com.pite.batterymonitor.R;
 import com.pite.batterymonitor.utils.PCSInfos;
 
+import android.app.Activity;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.util.Log;
@@ -22,13 +23,13 @@ public class LoadFragment01 extends Fragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		View view = View.inflate(getActivity(), R.layout.loadfm01, null);
-		initData(view);
 		info = PCSMainActivity.info;
+		initData(view);
 		return view;
 		}
 
-	private void initData(View view ) {
-		load_tv = (TextView)  view.findViewById(R.id.load_tv);
+	private void initData(View view) {
+		load_tv =  (TextView)  view.findViewById(R.id.load_tv);
 		load_tv2 = (TextView) view.findViewById(R.id.load_tv2);
 		load_tv3 = (TextView) view.findViewById(R.id.load_tv3);
 		load_tv4 = (TextView) view.findViewById(R.id.load_tv4);
@@ -53,7 +54,7 @@ public class LoadFragment01 extends Fragment {
 	}
 	private void SetValue(){
 		if (info != null) {
-			load_tv.setText(info.get(0).getSystemoutputUV());
+			load_tv .setText(info.get(0).getSystemoutputUV());
 			load_tv2.setText(info.get(0).getSystemoutputUI());
 			load_tv3.setText(info.get(0).getSystemoutputLoadUP());
 			load_tv4.setText(info.get(0).getSystemoutputUYP());
@@ -77,10 +78,10 @@ public class LoadFragment01 extends Fragment {
 			load_tv18.setText(info.get(0).getSystemoutputWSP());
 			// PFֵ
 			load_tv19.setText(info.get(0).getSystemoutputWPF());
-			Log.e("tag", "%%%%%%%%%%%%%%%%%%%%%%%%");
 		}
-		
-		
 	}
-
+	@Override
+	public void onAttach(Activity activity) {
+		super.onAttach(activity);
+	}
 }

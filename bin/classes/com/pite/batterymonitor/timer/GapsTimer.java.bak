@@ -9,21 +9,17 @@ import org.json.JSONObject;
 
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
-import com.pite.batterymonitor.LoginActivity;
-import com.pite.batterymonitor.PacketActivity;
 import com.pite.batterymonitor.R;
-import com.pite.batterymonitor.TimeMonitorActivity;
 import com.pite.batterymonitor.constant.Constant;
-import com.pite.batterymonitor.fragment.HistogramFragment;
 import com.pite.batterymonitor.http.HttpReustClient;
 import com.pite.batterymonitor.utils.JsonId;
-import com.umeng.message.proguard.h;
+import com.pite.batterymonitor.LoginActivity;
+import com.pite.batterymonitor.TimeMonitorActivity;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Handler;
 import android.util.Log;
-import android.view.View;
 
 public class GapsTimer {
 	private Context context;

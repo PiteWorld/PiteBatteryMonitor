@@ -10,6 +10,7 @@ public class BatteryGroupUtils {
 	private int device; // 电池状态
 	private int network; // 网络连接
 	private int groupStatus; // 设备状态
+	private	String rooturl;
 	// 测试类型
 	private String typename; // 测试类型
 	private int equipmentStatus; // 电池状态
@@ -26,6 +27,98 @@ public class BatteryGroupUtils {
 	private int groupID; // 电池分组ID
 	private String status; // 直方图状态
 	private String workStatus;
+	private int nodeType;
+	private String devtype;
+	private String wSColor;
+	private String gScolor;
+	private String wSName;
+	private String gSname;
+	private String hctype;
+	//2D地图经度
+	private String longitude;
+	//2D地图纬度
+	private String latitude;
+	
+	//测试类型标识
+	private String testType;
+	
+	//告警信息
+	//事件
+	private String alarmMsg;
+	//时间
+	private String Alarmtime;
+	//告警标识符
+	private String AlarmFlag;
+	
+	public String getTestType() {
+		return testType;
+	}
+
+	public void setTestType(String testType) {
+		this.testType = testType;
+	}
+
+	public String gethctype() {
+		return hctype;
+	}
+
+	public void sethctype(String hctype) {
+		this.hctype = hctype;
+	}
+	public String getwSColor() {
+		return wSColor;
+	}
+
+	public void setwSColor(String wSColor) {
+		this.wSColor = wSColor;
+	}
+
+	public String getgScolor() {
+		return gScolor;
+	}
+
+	public void setgScolor(String gScolor) {
+		this.gScolor = gScolor;
+	}
+
+	public String getwSName() {
+		return wSName;
+	}
+
+	public void setwSName(String wSName) {
+		this.wSName = wSName;
+	}
+
+	public String getgSname() {
+		return gSname;
+	}
+
+	public void setgSname(String gSname) {
+		this.gSname = gSname;
+	}
+
+	public String getDevtype() {
+		return devtype;
+	}
+
+	public void setDevtype(String devtype) {
+		this.devtype = devtype;
+	}
+	public String getRooturl() {
+		return rooturl;
+	}
+	
+	public void setRooturl(String rooturl) {
+		this.rooturl = rooturl;
+	}
+
+	public int getNodeType() {
+		return nodeType;
+	}
+
+	public void setNodeType(int nodeType) {
+		this.nodeType = nodeType;
+	}
 
 	public String getWorkStatus() {
 		return workStatus;
@@ -186,4 +279,62 @@ public class BatteryGroupUtils {
 	public int getGroupStatus() {
 		return this.groupStatus;
 	}
+
+	public String getAlarmMsg() {
+		return alarmMsg;
+	}
+
+	public void setAlarmMsg(String alarmMsg) {
+		this.alarmMsg = alarmMsg;
+	}
+
+	public String getAlarmtime() {
+		return Alarmtime;
+	}
+
+	public void setAlarmtime(String alarmtime) {
+		Alarmtime = alarmtime;
+	}
+
+	public String getAlarmFlag() {
+		return AlarmFlag;
+	}
+
+	public void setAlarmFlag(String alarmFlag) {
+		AlarmFlag = alarmFlag;
+	}
+
+	public String getLongitude() {
+		return longitude;
+	}
+
+	public void setLongitude(String longitude) {
+		this.longitude = longitude;
+	}
+
+	public String getLatitude() {
+		return latitude;
+	}
+
+	public void setLatitude(String latitude) {
+		this.latitude = latitude;
+	}
+
+	@Override
+	public String toString() {
+		return "BatteryGroupUtils [nodeid=" + nodeid + ", nodename=" + nodename + ", groupname=" + groupname
+				+ ", device=" + device + ", network=" + network + ", groupStatus=" + groupStatus + ", rooturl="
+				+ rooturl + ", typename=" + typename + ", equipmentStatus=" + equipmentStatus + ", netStatus="
+				+ netStatus + ", batterytypeName=" + batterytypeName + ", nominalR=" + nominalR + ", vMin=" + vMin
+				+ ", vMinN=" + vMinN + ", rMaxN=" + rMaxN + ", rMax=" + rMax + ", testgroupvoltage=" + testgroupvoltage
+				+ ", testgroupampere=" + testgroupampere + ", groupID=" + groupID + ", status=" + status
+				+ ", workStatus=" + workStatus + ", nodeType=" + nodeType + ", devtype=" + devtype + ", wSColor="
+				+ wSColor + ", gScolor=" + gScolor + ", wSName=" + wSName + ", gSname=" + gSname + ", hctype=" + hctype
+				+ ", longitude=" + longitude + ", latitude=" + latitude + ", testType=" + testType + ", alarmMsg="
+				+ alarmMsg + ", Alarmtime=" + Alarmtime + ", AlarmFlag=" + AlarmFlag + "]";
+	}
+
+	
+	
+	
 }

@@ -26,6 +26,7 @@ public class StatusUtils {
 		// context.getResources().getString(R.drawable.cross) :
 		// context.getResources().getString(R.drawable.checkmark);
 		String change = data.equals("0") ? context.getResources().getString(R.string.cross)
+				:data.equals("--")?context.getResources().getString(R.string.not)
 				: context.getResources().getString(R.string.checkmark);
 		return change;
 	}
@@ -60,7 +61,9 @@ public class StatusUtils {
 										: data.equals("3") ? context.getResources().getString(R.string.Change)
 												: data.equals("6")
 														? context.getResources().getString(R.string.Exception)
-														: context.getResources().getString(R.string.Exception);
+														:data.equals("--")
+															?context.getResources().getString(R.string.not)
+																	:context.getResources().getString(R.string.Exception);
 		return change;
 	}
 }

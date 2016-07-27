@@ -43,24 +43,29 @@ public class BatTrendFragment extends Fragment {
 	private List<ChartLineDataUI> listIA = null;
 	private ChartLineDataUI values = null;
 	
-	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		View view=View.inflate(getActivity(),R.layout.activity_battrendfragment, null);
 		initData(view);
 		return view;
 	}
+	/**
+	 * 初始化视图
+	 * @param view
+	 */
 	private void initData(View view){
 		bat_UV=(BatLineChartView) view.findViewById(R.id.bat_UV);
 		bat_IA=(BatLineChartView) view.findViewById(R.id.bat_IA);
+		
 		listUV=new ArrayList<ChartLineDataUI>();
 		listIA=new ArrayList<ChartLineDataUI>();
 		// 初始化参数
-		float[][] f = { { 0f }, { 0f } ,{ 0f}};
+		float[][] f = { { 0f }};
 		listUV.add(new ChartLineDataUI(f));
 		GenerateData(listUV, bat_UV, 1, 1);
-		GenerateData(listIA, bat_IA, 1, 1);//??????????
-		HttpGetData("get_BatteryByPage/932/1/72/1", null);
+		GenerateData(listUV, bat_IA, 1, 1);
+	
+		HttpGetData("get_BatteryByPage/939/1/72/1", null);
 	}
 	/***
 	 * 1网络请求
@@ -104,7 +109,7 @@ public class BatTrendFragment extends Fragment {
 		for (int i = 0; i < numberOfLines; ++i) {
 			values = new ArrayList<PointValue>();
 			for (int j = 0; j < point; j++) {
-				values.add(new PointValue(j, listvalues.get(i).values[i][j])); //??????????
+				values.add(new PointValue(j, listvalues.get(i).values[i][j])); 
 			}
 			axisValues.add(new AxisValue(0)); // 设置X轴
 			ayisValues.add(new AxisValue(0)); // 设置y轴
@@ -140,20 +145,11 @@ public class BatTrendFragment extends Fragment {
 			return;
 		listUV.clear();
 		listIA.clear();
-		float[][] groupUI = new float[3][list.getDataInEveryPage().getBatteryByPage().getRecordCount()];
-		for (int k = 0; k < 3; k++) {
+		float[][] groupUI = new float[1][list.getDataInEveryPage().getBatteryByPage().getRecordCount()];
+		for (int k = 0; k < 1; k++) {
 			for (int j = 0; j < list.getDataInEveryPage().getBatteryByPage().getRecordCount(); j++) {
-				if (k == 0) {
 					groupUI[k][j] = Float
 							.parseFloat(list.getDataInEveryPage().getGroupByPage().getData().get(j).getVoltage());
-				}
-				else if (k == 1) {
-					groupUI[k][j] = Float
-							.parseFloat(list.getDataInEveryPage().getGroupByPage().getData().get(j).getVoltage())-10;
-				}else{
-					groupUI[k][j] = Float
-							.parseFloat(list.getDataInEveryPage().getGroupByPage().getData().get(j).getVoltage())-20;
-				}
 				values = new ChartLineDataUI(groupUI);
 			}
 			listUV.add(values);

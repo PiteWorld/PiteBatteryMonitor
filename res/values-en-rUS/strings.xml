@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+	
     <string name="app_name">PITE BMS</string>
+    <string name="name">Battery System</string>
     <string name="title_activity_menu">MenuActivity</string>
     <string name="title_activity_login">Battery Login</string>
     <string name="login_edt_name">UserName</string>
@@ -211,6 +212,38 @@
      <string name="string106">Select all</string>
      <string name="string107">Please select at least one entry！</string>
     <string name="Battery_min_R">Std R</string>
+    
+    <string name="Real_time_Info">Real tiem info</string>
+      <string name="Trend_datas">Trend_datas</string>
+      <string name="Stored_daily">Stored_daily</string>
+      <string name="Stored_monthly">Stored_monthly</string>
+     <string name="date">Date</string>
+      <!-- Ua(V)	Ub(V)	Uc(V)	Ia(A)	Ia(A)	Ia(A)	
+			La(%)	Lb(%)	Lc(%)	Pa(kW)	Pa(kW)	Pa(kW)	
+			Sa(kVA)	Sa(kVA)	Sa(kVA)	Pfb	Pfb	Pfc -->
+    <string name="string120">Ua(V)</string>
+    <string name="string121">Ub(V)</string>
+    <string name="string122">Uc(V)</string>
+    
+    <string name="string123">Ia(A)</string>
+    <string name="string124">Ib(A)</string>
+    <string name="string125">Ic(A)</string>
+    
+    <string name="string126">La(%)</string>
+    <string name="string127">Lb(%)</string>
+    <string name="string128">Lc(%)</string>
+    
+    <string name="string129">Pa(kW)</string>
+    <string name="string130">PbkW)</string>
+    <string name="string131">Pc(kW)</string>
+    
+    <string name="string132">Sa(kVA)</string>
+    <string name="string133">Sb(kVA)</string>
+    <string name="string134">Sc(kVA)</string>
+    
+    <string name="string135">Pfa</string>
+    <string name="string136">Pfb</string>
+    <string name="string137">Pfc</string>
     
     
     

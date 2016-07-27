@@ -114,10 +114,18 @@ public class TrendChartUtils {
 		}
 
 		public class Data {
+			public String TestId;
 			public String Time;
 
 			public List<Events> Events;
+			
+			public void setTestId(String TestId) {
+				this.TestId = TestId;
+			}
 
+			public String getTestId() {
+				return this.TestId;
+			}
 			public void setTime(String Time) {
 				this.Time = Time;
 			}

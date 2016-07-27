@@ -2975,6 +2975,9 @@ containing a value of this type.
         /**  Ua(V)	Ub(V)	Uc(V)	Ia(A)	Ia(A)	Ia(A)	
 			La(%)	Lb(%)	Lc(%)	Pa(kW)	Pa(kW)	Pa(kW)	
 			Sa(kVA)	Sa(kVA)	Sa(kVA)	Pfb	Pfb	Pfc 
+ Ua(V)	Ub(V)	Uc(V)	Ia(A)	Ia(A)	Ia(A)	
+			La(%)	Lb(%)	Lc(%)	Pa(kW)	Pa(kW)	Pa(kW)	
+			Sa(kVA)	Sa(kVA)	Sa(kVA)	Pfb	Pfb	Pfc 
          */
         public static final int string120=0x7f0a00f4;
         public static final int string121=0x7f0a00f5;

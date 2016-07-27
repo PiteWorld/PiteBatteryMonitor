@@ -69,7 +69,7 @@ public class LoadFragment02 extends Fragment {
 		generateDataABC(listUabc, loadfm_Sa, 1, 1);
 		generateDataABC(listUabc, loadfm_PFa, 1, 1);
 		
-		HttpGetData("get_BatteryByPage/939/1/72/1", null);
+		HttpGetData("get_BatteryByPage/939/2/72/1", null);
 	}
 
 	/***

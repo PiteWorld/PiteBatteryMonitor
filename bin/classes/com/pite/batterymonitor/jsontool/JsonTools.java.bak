@@ -58,7 +58,7 @@ public class JsonTools {
 	}
 
 	public static <T> List<T> getlist(String json, Class<T> cls) {
-		List<T> t = new ArrayList<>();
+		List<T> t = new ArrayList<T>();
 		try {
 			Gson gson = new Gson();
 			t = gson.fromJson(json, new TypeToken<List<T>>() {

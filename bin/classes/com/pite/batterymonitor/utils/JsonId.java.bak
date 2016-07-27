@@ -1,15 +1,15 @@
 package com.pite.batterymonitor.utils;
 
-import com.pite.batterymonitor.TimeMonitorActivity;
 import com.pite.batterymonitor.fragment.HisDataFragment;
 import com.pite.batterymonitor.fragment.HistogramFragment;
 import com.pite.batterymonitor.fragment.TrendDataFragment;
 import com.pite.batterymonitor.fragment.TrendFragment;
+import com.pite.batterymonitor.TimeMonitorActivity;
 
 public class JsonId {
 	public static String Time;
 	public static String TestID;
-	public static int numPostion = 0;
+	public static int numPostion = -1;
 	public static int timePostion = 0;
 	public static int timeGapsPostion = 0;
 	public static boolean isGapsPostion = false;
@@ -18,8 +18,16 @@ public class JsonId {
 	public static TrendFragment trend = null;
 	public static TrendDataFragment trenddata = null;
 	public static TimeMonitorActivity tm = null;
+	//Ìí¼Ó±ê¼Ç
+	public static int flage = 0;
+	public static int getFlage() {
+		return flage;
+	}
 
-	
+	public static void setFlage(int flage) {
+		JsonId.flage = flage;
+	}
+
 	public static TimeMonitorActivity getTm() {
 		return tm;
 	}
