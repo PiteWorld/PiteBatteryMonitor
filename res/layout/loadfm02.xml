@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/testtitlestyle"
+                android:layout_width="80dp"
+                android:text="@string/string120"
+                android:textColor="@color/huangse"/>
+
+            <TextView
+                style="@style/testtitlestyle"
+                android:layout_width="80dp"
+                android:text="@string/string121"
+                android:textColor="@color/lvse" />
+
+            <TextView
+                style="@style/testtitlestyle"
+                android:layout_width="80dp"
+                android:text="@string/string122"
+                android:textColor="@color/hongse" />
+        </LinearLayout>
+
+        <MyLayout.MyLineChartView_LOAD
+            android:id="@+id/loadfm_U"
+            android:layout_width="match_parent"
+            android:layout_height="120dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/testtitlestyle"
+                android:layout_width="80dp"
+                android:text="@string/string123"
+                android:textColor="@color/huangse" />
+
+            <TextView
+                style="@style/testtitlestyle"
+                android:layout_width="80dp"
+                android:text="@string/string124"
+                android:textColor="@color/lvse" />
+
+            <TextView
+                style="@style/testtitlestyle"
+                android:layout_width="80dp"
+                android:text="@string/string125"
+                android:textColor="@color/hongse" />
+        </LinearLayout>
+
+        <MyLayout.MyLineChartView_LOAD
+            android:id="@+id/loadfm_I"
+            android:layout_width="match_parent"
+            android:layout_height="120dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/testtitlestyle"
+                android:layout_width="80dp"
+                android:text="@string/string126"
+                android:textColor="@color/huangse" />
+
+            <TextView
+                style="@style/testtitlestyle"
+                android:layout_width="80dp"
+                android:text="@string/string127"
+                android:textColor="@color/lvse" />
+
+            <TextView
+                style="@style/testtitlestyle"
+                android:layout_width="80dp"
+                android:text="@string/string128"
+                android:textColor="@color/hongse" />
+        </LinearLayout>
+
+        <MyLayout.MyLineChartView_LOAD
+            android:id="@+id/loadfm_Load"
+            android:layout_width="match_parent"
+            android:layout_height="120dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/testtitlestyle"
+                android:layout_width="80dp"
+                android:text="@string/string129"
+                android:textColor="@color/huangse"/>
+
+            <TextView
+                style="@style/testtitlestyle"
+                android:layout_width="80dp"
+                android:text="@string/string130"
+                android:textColor="@color/lvse" />
+
+            <TextView
+                style="@style/testtitlestyle"
+                android:layout_width="80dp"
+                android:text="@string/string131"
+                android:textColor="@color/hongse" />
+        </LinearLayout>
+
+        <MyLayout.MyLineChartView_LOAD
+            android:id="@+id/loadfm_Pa"
+            android:layout_width="match_parent"
+            android:layout_height="120dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/testtitlestyle"
+                android:layout_width="80dp"
+                android:text="@string/string132"
+                android:textColor="@color/huangse" />
+
+            <TextView
+                style="@style/testtitlestyle"
+                android:layout_width="80dp"
+                android:text="@string/string133"
+                android:textColor="@color/lvse" />
+          
+            <TextView
+                style="@style/testtitlestyle"
+                android:layout_width="80dp"
+                android:text="@string/string134"
+                android:textColor="@color/hongse" />
+        </LinearLayout>
+
+        <MyLayout.MyLineChartView_LOAD
+            android:id="@+id/loadfm_Sa"
+            android:layout_width="match_parent"
+            android:layout_height="120dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/testtitlestyle"
+                android:layout_width="80dp"
+                android:text="@string/string135"
+                android:textColor="@color/huangse" />
+
+            <TextView
+                style="@style/testtitlestyle"
+                android:layout_width="80dp"
+                android:text="@string/string136"
+                android:textColor="@color/lvse" />
+
+            <TextView
+                style="@style/testtitlestyle"
+                android:layout_width="80dp"
+                android:text="@string/string137"
+                android:textColor="@color/hongse" />
+        </LinearLayout>
+
+        <MyLayout.MyLineChartView_LOAD
+            android:id="@+id/loadfm_PFa"
+            android:layout_width="match_parent"
+            android:layout_height="120dp" />
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,81 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/baise"
+    tools:context=".TimeMonitorActivity" >
+
+    <LinearLayout
+        android:id="@+id/line_monitor"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/histogram_btn"
+            style="@style/size10"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:focusable="true"
+            android:background="@drawable/switch_pictrue"
+            android:text="@string/DataAnalysis"
+            android:textColor="@color/heise" />
+
+        <Button
+            android:id="@+id/trend_btn"
+            style="@style/size10"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/switch_pictrue"
+            android:text="@string/Thrend_btn"
+            android:textColor="@color/heise" />
+
+        <Button
+            android:id="@+id/his_data_btn"
+            style="@style/size10"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/switch_pictrue"
+            android:text="@string/his_data"
+            android:textColor="@color/heise" />
+        
+         <Button
+            android:id="@+id/voltageAnalysisAD_bt"
+            style="@style/size10"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/switch_pictrue"
+            android:text="@string/voltageAnalysisAD"
+            android:textColor="@color/heise" />
+          <Button
+            android:id="@+id/resistanceAnalysisAD_bt"
+            style="@style/size10"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/switch_pictrue"
+            android:text="@string/resistanceAnalysisAD"
+            android:textColor="@color/heise" />
+          <Button
+            android:id="@+id/trend_data_btn"
+            style="@style/size10"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/switch_pictrue"
+            android:text="@string/Trend_data"
+            android:textColor="@color/heise" />
+    </LinearLayout>
+	<LinearLayout 
+	    android:id="@+id/content"
+	    android:orientation="vertical"
+	    android:layout_below="@id/line_monitor"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    ></LinearLayout>
+	
+</RelativeLayout>

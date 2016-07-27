@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="30dp"
+        android:orientation="horizontal" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/string120"
+                android:textColor="@android:color/black" />
+            <MyLayout.BatLineChartView
+                android:id="@+id/bat_UV"
+                android:layout_width="match_parent"
+                android:layout_height="120dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/string123"
+                android:textColor="@android:color/black" />
+            <MyLayout.BatLineChartView
+                android:id="@+id/bat_IA"
+                android:layout_width="match_parent"
+                android:layout_height="120dp" />
+        </LinearLayout>
+    </LinearLayout>
+  </ScrollView>

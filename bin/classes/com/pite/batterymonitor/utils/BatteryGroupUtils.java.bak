@@ -1,0 +1,189 @@
+package com.pite.batterymonitor.utils;
+
+/**
+ * 电池组信息
+ */
+public class BatteryGroupUtils {
+	private int nodeid; // ID
+	private String nodename; // 站名
+	private String groupname; // 组名
+	private int device; // 电池状态
+	private int network; // 网络连接
+	private int groupStatus; // 设备状态
+	// 测试类型
+	private String typename; // 测试类型
+	private int equipmentStatus; // 电池状态
+	private int netStatus; // 连接状态
+	// 图表 文本框
+	private String batterytypeName; // 电池类型
+	private String nominalR; // 标准内阻
+	private String vMin; // 最小电压
+	private String vMinN;
+	private String rMaxN;
+	private String rMax; // 最大内阻
+	private String testgroupvoltage;// 组电压
+	private String testgroupampere; // 组电流
+	private int groupID; // 电池分组ID
+	private String status; // 直方图状态
+	private String workStatus;
+
+	public String getWorkStatus() {
+		return workStatus;
+	}
+
+	public void setWorkStatus(String workStatus) {
+		this.workStatus = workStatus;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+	public String getvMinN() {
+		return vMinN;
+	}
+
+	public void setvMinN(String vMinN) {
+		this.vMinN = vMinN;
+	}
+
+	public String getrMaxN() {
+		return rMaxN;
+	}
+
+	public void setrMaxN(String rMaxN) {
+		this.rMaxN = rMaxN;
+	}
+
+	public int getGroupID() {
+		return groupID;
+	}
+
+	public void setGroupID(int groupID) {
+		this.groupID = groupID;
+	}
+
+	public String getBatterytypeName() {
+		return batterytypeName;
+	}
+
+	public void setBatterytypeName(String batterytypeName) {
+		this.batterytypeName = batterytypeName;
+	}
+
+	public String getNominalR() {
+		return nominalR;
+	}
+
+	public void setNominalR(String nominalR) {
+		this.nominalR = nominalR;
+	}
+
+	public String getvMin() {
+		return vMin;
+	}
+
+	public void setvMin(String vMin) {
+		this.vMin = vMin;
+	}
+
+	public String getrMax() {
+		return rMax;
+	}
+
+	public void setrMax(String rMax) {
+		this.rMax = rMax;
+	}
+
+	public String getTestgroupvoltage() {
+		return testgroupvoltage;
+	}
+
+	public void setTestgroupvoltage(String testgroupvoltage) {
+		this.testgroupvoltage = testgroupvoltage;
+	}
+
+	public String getTestgroupampere() {
+		return testgroupampere;
+	}
+
+	public void setTestgroupampere(String testgroupampere) {
+		this.testgroupampere = testgroupampere;
+	}
+
+	public String getTypename() {
+		return typename;
+	}
+
+	public void setTypename(String typename) {
+		this.typename = typename;
+	}
+
+	public int getEquipmentStatus() {
+		return equipmentStatus;
+	}
+
+	public void setEquipmentStatus(int equipmentStatus) {
+		this.equipmentStatus = equipmentStatus;
+	}
+
+	public int getNetStatus() {
+		return netStatus;
+	}
+
+	public void setNetStatus(int netStatus) {
+		this.netStatus = netStatus;
+	}
+
+	public String getGroupname() {
+		return groupname;
+	}
+
+	public void setGroupname(String groupname) {
+		this.groupname = groupname;
+	}
+
+	public void setNodeid(int nodeid) {
+		this.nodeid = nodeid;
+	}
+
+	public int getNodeid() {
+		return this.nodeid;
+	}
+
+	public void setNodename(String nodename) {
+		this.nodename = nodename;
+	}
+
+	public String getNodename() {
+		return this.nodename;
+	}
+
+	public void setDevice(int device) {
+		this.device = device;
+	}
+
+	public int getDevice() {
+		return this.device;
+	}
+
+	public void setNetwork(int network) {
+		this.network = network;
+	}
+
+	public int getNetwork() {
+		return this.network;
+	}
+
+	public void setGroupStatus(int groupStatus) {
+		this.groupStatus = groupStatus;
+	}
+
+	public int getGroupStatus() {
+		return this.groupStatus;
+	}
+}

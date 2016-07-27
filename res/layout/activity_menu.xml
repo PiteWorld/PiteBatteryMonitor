@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/baise"
+    android:orientation="vertical"
+    tools:context=".MenuActivity" >
+
+    <LinearLayout
+        android:id="@+id/menu_titles"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:background="@drawable/top_bg">
+        <ImageView android:id="@+id/menu_image"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:src="@drawable/ic_launcher"
+            android:layout_width="80dp"/>
+        <TextView 
+            android:padding="10dp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/Battery_Information"
+            android:textColor="@color/baise"
+            style="@style/size20"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/menu_title"
+        android:layout_below="@+id/menu_titles"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/title_cell"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+    <ListView
+        android:layout_below="@+id/menu_title"
+        android:layout_above="@+id/menu_ll"
+        android:id="@+id/menu_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/content_cell"
+        android:divider="@drawable/line"
+        android:dividerHeight="1dp" >
+    </ListView>
+    <LinearLayout 
+        android:id="@+id/menu_ll"
+        android:layout_height="30dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+            <TextView
+                android:id="@+id/menu_corporate_name"
+                android:layout_marginLeft="5dp"
+                style="@style/size10"
+                android:layout_height="match_parent"
+                android:textColor="@color/heise"
+                android:layout_width="wrap_content"
+                android:gravity="center"/>
+            <TextView android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                style="@style/size10"
+                android:textColor="@color/heise"
+                android:text="@string/telnum"/>
+            <TextView
+                android:id="@+id/menu_telnum"
+                android:layout_marginLeft="5dp"
+                style="@style/size10"
+                android:layout_height="match_parent"
+                android:textColor="@color/heise"
+                android:layout_width="wrap_content"
+                android:gravity="center"/>
+    </LinearLayout>
+</RelativeLayout>

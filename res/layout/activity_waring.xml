@@ -1,0 +1,329 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical"
+    tools:context=".WaringActivity" >
+
+    <!-- 标题信息 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/top_bg" >
+
+        <ImageButton
+            android:id="@+id/war_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/top_bg"
+            android:contentDescription="@string/Battery_gaps"
+            android:src="@drawable/back_n" />
+
+        <TextView
+            android:id="@+id/war_title"
+            style="@style/size20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/war_back"
+            android:text="@string/string101"
+            android:textColor="@color/baise" />
+
+        <ImageButton
+            android:id="@+id/war_home"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/top_bg"
+            android:paddingRight="10dp"
+            android:src="@drawable/home" />
+    </RelativeLayout>
+    <!-- 电池信息 -->
+
+    <LinearLayout
+        android:id="@+id/war_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <TextView
+                style="@style/size15"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="@string/Battery_station"
+                android:textColor="@color/heise" />
+
+            <TextView
+                style="@style/size15"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="@string/Battery_type2"
+                android:textColor="@color/heise" />
+
+            <TextView
+                style="@style/size15"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="@string/Battery_u_top_limit"
+                android:textColor="@color/heise" />
+
+            <TextView
+                style="@style/size15"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="@string/Battery_temper_top_limit"
+                android:textColor="@color/heise" />
+
+            <TextView
+                style="@style/size15"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="@string/Battery_r_relpace"
+                android:textColor="@color/heise" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/war_station"
+                style="@style/size15"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:textColor="@color/heise" />
+
+            <TextView
+                android:id="@+id/war_type"
+                style="@style/size15"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:textColor="@color/heise" />
+
+            <TextView
+                android:id="@+id/war_u_top_limit"
+                style="@style/size15"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:textColor="@color/heise" />
+
+            <TextView
+                android:id="@+id/war_temper_top_limit"
+                style="@style/size15"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:textColor="@color/heise" />
+
+            <TextView
+                android:id="@+id/war_r_relpace"
+                style="@style/size15"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:textColor="@color/heise" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                style="@style/size15"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="@string/Battery_group"
+                android:textColor="@color/heise" />
+
+            <TextView
+                style="@style/size15"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="@string/Battery_min_R"
+                android:textColor="@color/heise" />
+
+            <TextView
+                style="@style/size15"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="@string/Battery_u_limit"
+                android:textColor="@color/heise" />
+
+            <TextView
+                style="@style/size15"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="@string/Battery_temper_limit"
+                android:textColor="@color/heise" />
+
+            <TextView
+                style="@style/size15"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="@string/Battery_r_wring"
+                android:textColor="@color/heise" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/war_group_name"
+                style="@style/size15"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:textColor="@color/heise" />
+
+            <TextView
+                android:id="@+id/war_min_r"
+                style="@style/size15"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:textColor="@color/heise" />
+
+            <TextView
+                android:id="@+id/war_u_limit"
+                style="@style/size15"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:textColor="@color/heise" />
+
+            <TextView
+                android:id="@+id/war_temper_limit"
+                style="@style/size15"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:textColor="@color/heise" />
+
+            <TextView
+                android:id="@+id/war_r_waring"
+                style="@style/size15"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:textColor="@color/heise" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp" >
+
+        <LinearLayout
+            android:id="@+id/quanxuan"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp" >
+
+            <CheckBox
+                android:id="@+id/war_check_all"
+                style="@style/size15"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/checkboxbackgrounk"
+                android:button="@null"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:textColor="@color/heise" />
+
+            <TextView
+                android:id="@+id/war_tv_deal"
+                style="@style/size15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="@string/string106"
+                android:textColor="@color/heise" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/war_btn_deal"
+            style="@style/size15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/btselector"
+            android:text="@string/string103"
+            android:textColor="@color/heise" />
+    </RelativeLayout>
+    <!-- 告警信息 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="25dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/title_cell"
+            android:gravity="center"
+            android:textColor="@color/heise" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/line" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@drawable/title_cell"
+            android:gravity="center"
+            android:text="@string/ba_time"
+            android:textColor="@color/heise" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/line" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/title_cell"
+            android:gravity="center"
+            android:text="@string/ba_event"
+            android:textColor="@color/heise" />
+        <!--
+         <View android:layout_height="match_parent"
+             android:layout_width="1dp"
+             android:background="@drawable/line"/>
+         <TextView android:layout_height="match_parent"
+             android:layout_width="50dp"
+             android:gravity="center"
+             android:textColor="@color/heise"
+             android:background="@drawable/title_cell"
+             android:text="@string/ba_operate"/>
+        -->
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/war_listview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp" >
+    </ListView>
+
+</LinearLayout>

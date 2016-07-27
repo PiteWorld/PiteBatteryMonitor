@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="language">
+        <item>中文</item>
+        <item>English</item>
+    </string-array>
+    <string-array name="test_time">
+        <item>15分钟</item>
+        <item>30分钟</item>
+        <item>1小时</item>
+        <item>12小时</item>
+        <item>1天</item>
+        <item>1周</item>
+        <item>2周</item>
+        <item>1月</item>
+    </string-array>
+</resources>

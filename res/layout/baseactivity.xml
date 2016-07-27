@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff" >
+	<LinearLayout 
+	    android:id="@+id/base_ll"
+	    android:layout_height="50dp"
+	    android:layout_width="match_parent"
+	    android:background="@color/titleColor"
+	    android:gravity="center_vertical"
+	    android:orientation="horizontal">
+	    
+	    <ImageButton android:id="@+id/back"
+	        android:contentDescription="@string/app_name"
+	        android:background="@color/titleColor"
+	        android:layout_height="match_parent"
+	        android:layout_width="wrap_content"
+	        android:src="@drawable/back_n"/>
+	     <TextView
+	        android:id="@+id/Title"
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	        android:gravity="center_vertical"
+	        android:padding="5dp"
+	        android:textSize="25sp"
+	        android:text="@string/hello_world" />
+	      <TextView 
+	        android:id="@+id/ttime"
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	        android:gravity="center_vertical"
+	        android:textSize="15sp"
+	        android:layout_marginLeft="100dp"
+	        />
+	</LinearLayout>
+	<ImageButton 
+	    android:id="@+id/base_home"
+	    android:contentDescription="@string/app_name"
+	    android:layout_height="50dp"
+	    android:layout_width="wrap_content"
+	    android:background="@color/titleColor"
+	    android:src="@drawable/home"
+	    android:paddingRight="10dp"
+	    android:layout_alignParentRight="true"/>
+	<LinearLayout 
+	    android:layout_below="@+id/base_ll"
+	    android:id="@+id/content"
+	    android:layout_height="match_parent"
+	    android:layout_width="match_parent"
+	    android:orientation="vertical"/>
+</RelativeLayout>

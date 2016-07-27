@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cortnetschart"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <TextView
+                    style="@style/size10"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical|right"
+                    android:text="@string/Battery_station"
+                    android:textColor="@color/heise" />
+
+                <TextView
+                    style="@style/size10"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical|right"
+                    android:text="@string/Battery_type2"
+                    android:textColor="@color/heise" />
+
+                <TextView
+                    style="@style/size10"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical|right"
+                    android:text="@string/total_voltage"
+                    android:textColor="@color/heise" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/size10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/trend_name"
+                    style="@style/size10"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical|right"
+                    android:textColor="@color/heise" />
+
+                <TextView
+                    android:id="@+id/trend_Battery_type"
+                    style="@style/size10"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical|right"
+                    android:textColor="@color/heise" />
+
+                <TextView
+                    android:id="@+id/trend_total_voltage"
+                    style="@style/size10"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical|right"
+                    android:textColor="@color/heise" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <TextView
+                    style="@style/size10"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical|right"
+                    android:text="@string/Battery_group"
+                    android:textColor="@color/heise" />
+
+                <TextView
+                    style="@style/size10"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical|right"
+                    android:text="@string/Internal_standard"
+                    android:textColor="@color/heise" />
+
+                <TextView
+                    style="@style/size10"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical|right"
+                    android:text="@string/total_current"
+                    android:textColor="@color/heise" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/trend_Battery_group"
+                    style="@style/size10"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical|right"
+                    android:textColor="@color/heise" />
+
+                <TextView
+                    android:id="@+id/trend_Internal_standard"
+                    style="@style/size10"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical|right"
+                    android:textColor="@color/heise" />
+
+                <TextView
+                    android:id="@+id/trend_total_current"
+                    style="@style/size10"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical|right"
+                    android:textColor="@color/heise" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <TextView
+                    style="@style/size10"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical|right"
+                    android:text="@string/Battery_manufacturers"
+                    android:textColor="@color/heise" />
+
+                <TextView
+                    style="@style/size10"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical|right"
+                    android:text="@string/Battery_num"
+                    android:textColor="@color/heise" />
+
+                <TextView
+                    style="@style/size10"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical|right"
+                    android:text="@string/pite_battery_num"
+                    android:textColor="@color/heise" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/trend_manufacturers"
+                    style="@style/size10"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:textColor="@color/heise" />
+
+                <TextView
+                    android:id="@+id/trend_Battery_num"
+                    style="@style/size10"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:textColor="@color/heise" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <TextView
+                        style="@style/size10"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|right"
+                        android:text="@string/Battery_status"
+                        android:textColor="@color/heise" />
+
+                    <TextView
+                        android:id="@+id/trend_Battery_status"
+                        style="@style/size10"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|right"
+                        android:textColor="@color/heise" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <TextView
+                        android:id="@+id/thr_sydl"
+                        style="@style/size10"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|right"
+                        android:text="@string/pite_battery_charge"
+                        android:textColor="@color/heise" />
+
+                    <TextView
+                        android:id="@+id/trend_charge"
+                        style="@style/size10"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="3dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textColor="@color/heise" />
+                </LinearLayout>
+            </LinearLayout>
+            
+            
+              <!--  <ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <Spinner
+                    android:id="@+id/trend_sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/cortnetschart"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:gravity="center" />
+            </ListView> -->
+
+          <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+                <Spinner
+                    android:id="@+id/trend_sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/cortnetschart"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:gravity="center" />
+            </LinearLayout> 
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/trend_ll_ua"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tex_title_ui"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/tex_title_uis"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:textColor="@android:color/black" />
+                </LinearLayout>
+
+                <MyLayout.MyLineChartView
+                    android:id="@+id/trend_gUI"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp" />
+
+                <TextView
+                    android:id="@+id/trend_tex_UI"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"
+                    android:textSize="12dp" />
+            </LinearLayout>
+            <!-- 总电压  总电流 -->
+
+            <LinearLayout
+                android:id="@+id/trend_ll_u"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/tex_title_uqita"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:textColor="@android:color/black" />
+
+                <MyLayout.MyLineChartView
+                    android:id="@+id/trend_uqita"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp" />
+
+                <TextView
+                    android:id="@+id/trend_tex_Uqita"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/trend_ll_i"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/tex_title_iqita"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:textColor="@android:color/black" />
+
+                <MyLayout.MyLineChartView
+                    android:id="@+id/trend_iqita"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp" />
+
+                <TextView
+                    android:id="@+id/trend_tex_iqita"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/trend_ll_cqita"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/tex_title_cqita"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:textColor="@android:color/black" />
+
+                <MyLayout.MyLineChartView
+                    android:id="@+id/trend_cqita"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/trend_tex_Cqita"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tex_title_u"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textColor="@android:color/black" />
+
+            <MyLayout.MyLineChartView
+                android:id="@+id/trend_u"
+                android:layout_width="match_parent"
+                android:layout_height="120dp" />
+
+            <TextView
+                android:id="@+id/trend_tex_U"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textSize="12dp" />
+
+            <LinearLayout
+                android:id="@+id/trend_ll_r"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tex_title_r"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:textColor="@android:color/black" />
+
+                <MyLayout.MyLineChartView
+                    android:id="@+id/trend_r"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp" />
+
+                <TextView
+                    android:id="@+id/trend_tex_R"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tex_title_t"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textColor="@android:color/black" />
+
+            <MyLayout.MyLineChartView
+                android:id="@+id/trend_t"
+                android:layout_width="match_parent"
+                android:layout_height="120dp" />
+
+            <TextView
+                android:id="@+id/trend_tex_T"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textSize="12dp" />
+
+            <LinearLayout
+                android:id="@+id/trend_ll_c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tex_title_c"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:textColor="@android:color/black" />
+
+                <MyLayout.MyLineChartView
+                    android:id="@+id/trend_c"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/trend_tex_C"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/trend_ll_r2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tex_title_r2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:textColor="@android:color/black" />
+
+                <MyLayout.MyLineChartView
+                    android:id="@+id/trend_r2"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/trend_tex_R2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/trend_ll_c2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tex_title_c2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:textColor="@android:color/black" />
+
+                <MyLayout.MyLineChartView
+                    android:id="@+id/trend_c2"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp" />
+
+                <TextView
+                    android:id="@+id/trend_tex_C2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center_horizontal"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"
+                    android:textSize="12dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

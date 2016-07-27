@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="qianlan">#F0FFFF</color>
+    <color name="baise">#FFFFFF</color>
+    <color name="heise">#000000</color>
+    <color name="transparent">#00000000</color> 
+    <color name="lvse">#009933</color> 
+    <color name="qianheise">#808080</color> 
+     <color name="huise">#cccccc</color>
+    <color name="titleColor">#3399cc</color>
+    <color name="huangse">#FFCC33</color>
+    <color name="hongse">#CC3366</color>
+</resources>

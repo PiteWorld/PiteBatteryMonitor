@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:orientation="horizontal" >
+        
+        <CheckBox
+            android:id="@+id/war_item_check"
+            android:layout_width="25dp"
+            android:layout_gravity="center"
+            android:button="@null"
+            android:layout_height="25dp"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:background="@drawable/checkboxbackgrounk"/>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/line" />
+
+        <TextView
+            android:id="@+id/war_item_time"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@drawable/content_cell"
+            android:gravity="center"
+            android:textColor="@color/heise" />
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/line" />
+
+        <TextView
+            android:id="@+id/war_item_event"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/content_cell"
+            android:gravity="center"
+            android:textColor="@color/heise" />
+      
+    </LinearLayout>
+
+</LinearLayout>
