@@ -60,7 +60,6 @@ public class LoginActivity extends Activity implements OnClickListener {
 	public static String nodid = null; //
 	public static String basic_ip;
 	public Context content;
-	private Locale locales;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
