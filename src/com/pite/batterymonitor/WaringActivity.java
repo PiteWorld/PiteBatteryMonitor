@@ -1,5 +1,6 @@
 package com.pite.batterymonitor;
 
+import java.math.BigDecimal;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
@@ -211,7 +212,18 @@ public class WaringActivity extends Activity implements OnClickListener, OnItemC
 		DecimalFormat df = new DecimalFormat("#0.00");
 		return df.format(Double.valueOf(str));
 	}
+	/**
+	 * 保留整数位
+	 */
+//	 public String stringToInt(String str){
+//		 BigDecimal a= new BigDecimal("#0.00");
+//		 a.setScale(0,BigDecimal.ROUND_UP);
+//		 
+//			return  a.setScale(0,BigDecimal.ROUND_UP);
+//
+//	   }
 
+	
 	boolean ischeck = true;
 
 	@Override

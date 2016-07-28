@@ -55,11 +55,12 @@ public class LoginActivity extends Activity implements OnClickListener {
 	private String getUserName, getUserPwd; // 获取输入 用户名密码
 	private boolean loginStatus; // 记住密码状态
 	private TextView piteVersion; // 程序版本号
-	private Button mBtnLanguage;
+//	private Button mBtnLanguage;
 	public static int isChinese = 0; // 中英文选择
 	public static String nodid = null; //
 	public static String basic_ip;
 	public Context content;
+	private Locale locales;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -85,7 +86,7 @@ public class LoginActivity extends Activity implements OnClickListener {
 		InputMethodService input = new InputMethodService();
 		context = LoginActivity.this;
 		share = new ShareXML(context);
-		mBtnLanguage = (Button) this.findViewById(R.id.sp_language);
+		//mBtnLanguage = (Button) this.findViewById(R.id.sp_language);
 		userName = (TextView) this.findViewById(R.id.login_name);
 		userPwd = (TextView) this.findViewById(R.id.login_pwd);
 		loginBtn = (Button) this.findViewById(R.id.login_btn);
@@ -114,31 +115,31 @@ public class LoginActivity extends Activity implements OnClickListener {
 			}
 		});
 		showXML();// 显示用户密码
-		mBtnLanguage.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				new AlertDialog.Builder(context).setTitle(R.string.language_change)
-						.setItems(R.array.language, new DialogInterface.OnClickListener() {
-
-							@Override
-							public void onClick(DialogInterface dialog, int which) {
-								Locale locale = getResources().getConfiguration().locale;
-								if (which == 0) {
-									isChinese = 0;
-									mBtnLanguage.setText("中文");
-									setLang(locale.SIMPLIFIED_CHINESE);
-								} else if (which == 1) {
-									isChinese = 1;
-									mBtnLanguage.setText("English");
-									setLang(locale.US);
-								}
-							}
-						}).show();
-			}
-		});
+//		mBtnLanguage.setOnClickListener(new OnClickListener() {
+//			@Override
+//			public void onClick(View v) {
+//				new AlertDialog.Builder(context).setTitle(R.string.language_change)
+//						.setItems(R.array.language, new DialogInterface.OnClickListener() {
+//
+//							@Override
+//							public void onClick(DialogInterface dialog, int which) {
+//								Locale locale = getResources().getConfiguration().locale;
+//								if (which == 0) {
+//									isChinese = 0;
+//									mBtnLanguage.setText("中文");
+//									setLang(locale.SIMPLIFIED_CHINESE);
+//								} else if (which == 1) {
+//									isChinese = 1;
+//									mBtnLanguage.setText("English");
+//									setLang(locale.US);
+//								}
+//							}
+//						}).show();
+//			}
+//		});
+		
 	}
-
+	
 	public void setLang(Locale locale) {
 		// 获得res资源对象
 		Resources resources = getResources();

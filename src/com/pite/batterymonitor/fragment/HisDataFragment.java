@@ -163,7 +163,6 @@ public class HisDataFragment extends Fragment {
 
 	public void initView() {
 		data_analysis_lv.setOnItemClickListener(new OnItemClickListener() {
-
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 				JsonId.setNumPostion(position);
@@ -174,7 +173,7 @@ public class HisDataFragment extends Fragment {
 		if(JsonId.getNumPostion()!=-1){
 			Log.e("tag", JsonId.getNumPostion()+"JsonId.getNumPostion()");
 		Data_Battery_time1.setSelection(JsonId.getNumPostion());
-		getDataTwo(JsonId.getNumPostion());
+		  getDataTwo(JsonId.getNumPostion());
 		}
 	
 		Data_Battery_time1.setOnItemSelectedListener(new OnItemSelectedListener() {

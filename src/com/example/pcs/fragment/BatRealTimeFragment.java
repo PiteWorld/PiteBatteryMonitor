@@ -65,10 +65,7 @@ public class BatRealTimeFragment extends Fragment {
 			}
 		}
 	}
-	@Override
-	public void onAttach(Activity activity) {
-		super.onAttach(activity);
-	}
+
 	/**
 	 * 保留一位小数
 	 * @param str

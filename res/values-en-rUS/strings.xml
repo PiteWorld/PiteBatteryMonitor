@@ -2,7 +2,7 @@
 <resources>
 	
     <string name="app_name">PITE BMS</string>
-    <string name="name">Battery System</string>
+    <string name="name">Battery Management System</string>
     <string name="title_activity_menu">MenuActivity</string>
     <string name="title_activity_login">Battery Login</string>
     <string name="login_edt_name">UserName</string>
@@ -27,12 +27,12 @@
     <string name="total_current">Istr:</string>
     <string name="total_voltage">Ustr:</string>
     <string name="SEND_LONG_TIME">Send Timeout</string>
-    <string name="Battery_u_top_limit">H limit:</string>
-    <string name="Battery_u_limit">V limit:</string>
-    <string name="Battery_temper_top_limit">UpperT:</string>
-    <string name="Battery_temper_limit">Tlimit:</string>
-    <string name="Battery_r_relpace">Rreplace:</string>
-    <string name="Battery_r_wring">Rwarning:</string>
+    <string name="Battery_u_top_limit">U Upper:</string>
+    <string name="Battery_u_limit">U Lower:</string>
+    <string name="Battery_temper_top_limit">T Upper:</string>
+    <string name="Battery_temper_limit">T Lower:</string>
+    <string name="Battery_r_relpace">R Replace:</string>
+    <string name="Battery_r_wring">R Warning:</string>
     <string name="Battery_group_current">Istr:</string>
     <string name="Battery_status">Cell_Sta:</string>
     <string name="Battery_time1">Test time:</string>
@@ -47,8 +47,8 @@
     <string name="Battery_group_u_name">270.9V</string>
     <string name="Battery_group_current_name">10.3I</string>
     <string name="Battery_status_name">Good</string>
-    <string name="Battery_postion">Position detection</string>
-    <string name="Battery_warning">Fault information</string>
+    <string name="Battery_postion">Map</string>
+    <string name="Battery_warning">warnings</string>
     <string name="pite_version">Version:</string>
     <string name="pite_tongbu">SynPar.</string>
     <string name="pite_tongbu_cmd">SynPamer Command sent please wait!!</string>
@@ -64,7 +64,7 @@
     <string name="good">good</string>
     <string name="ok_exit">Are you sure to exit?</string>
     <string name="yes">OK</string>
-    <string name="no">Cancel</string>
+    <string name="no">ESC</string>
     <string name="pite_gaps_cmd">Time Command sent please wait!!</string>
     <string name="pite_gaps_send_cmd">Command sent fail</string>
     <string name="pite_gaps_cmd_suec">Set Success</string>
@@ -113,7 +113,7 @@
     <string name="resqustFails">request was aborted</string>
     <string name="update">Do you need to update the version?</string>
     <string name="corporate_name">"corporate_name:"</string>
-    <string name="telnum">"telnum:"</string>
+    <string name="telnum">"tel:"</string>
     <string name="loading">"lading"</string>
     <string name="Load_in">"Load in...."</string>
     <string name="Dialog">Do you choose OK?</string>
