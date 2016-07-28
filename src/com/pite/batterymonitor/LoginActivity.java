@@ -55,7 +55,7 @@ public class LoginActivity extends Activity implements OnClickListener {
 	private String getUserName, getUserPwd; // 获取输入 用户名密码
 	private boolean loginStatus; // 记住密码状态
 	private TextView piteVersion; // 程序版本号
-//	private Button mBtnLanguage;
+	// private Button mBtnLanguage;
 	public static int isChinese = 0; // 中英文选择
 	public static String nodid = null; //
 	public static String basic_ip;
@@ -64,19 +64,22 @@ public class LoginActivity extends Activity implements OnClickListener {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_login);
+		isChinese = getIntent().getIntExtra("lage", 0);
+//		Log.e("2", "isChinese  "+isChinese);
 		content = this;
 		UmengUpdateAgent.setUpdateOnlyWifi(false);
 		UmengUpdateAgent.update(this);
 		PushAgent mPushAgent = PushAgent.getInstance(context);
 		mPushAgent.enable();
 		PushAgent.getInstance(context).onAppStart();
-		//String device_token = UmengRegistrar.getRegistrationId(context);
-		//调用版本更新方法
-//		Intent i = new Intent(Intent.ACTION_VIEW);
-//		i.setDataAndType(Uri.parse("file://" + apkfile.toString()),
-//		"application/vnd.android.package-archive");
-//		context.startActivity(i);
-		HttpGetVersion(Constant.LOGIN_LOGOADSS.concat(Constant.GETVERSION_NAME),null);
+		// String device_token = UmengRegistrar.getRegistrationId(context);
+		// 调用版本更新方法
+		// Intent i = new Intent(Intent.ACTION_VIEW);
+		// i.setDataAndType(Uri.parse("file://" + apkfile.toString()),
+		// "application/vnd.android.package-archive");
+		// context.startActivity(i);
+
+		HttpGetVersion(Constant.LOGIN_LOGOADSS.concat(Constant.GETVERSION_NAME), null);
 	}
 
 	@Override
@@ -85,7 +88,7 @@ public class LoginActivity extends Activity implements OnClickListener {
 		InputMethodService input = new InputMethodService();
 		context = LoginActivity.this;
 		share = new ShareXML(context);
-		//mBtnLanguage = (Button) this.findViewById(R.id.sp_language);
+		// mBtnLanguage = (Button) this.findViewById(R.id.sp_language);
 		userName = (TextView) this.findViewById(R.id.login_name);
 		userPwd = (TextView) this.findViewById(R.id.login_pwd);
 		loginBtn = (Button) this.findViewById(R.id.login_btn);
@@ -114,31 +117,31 @@ public class LoginActivity extends Activity implements OnClickListener {
 			}
 		});
 		showXML();// 显示用户密码
-//		mBtnLanguage.setOnClickListener(new OnClickListener() {
-//			@Override
-//			public void onClick(View v) {
-//				new AlertDialog.Builder(context).setTitle(R.string.language_change)
-//						.setItems(R.array.language, new DialogInterface.OnClickListener() {
-//
-//							@Override
-//							public void onClick(DialogInterface dialog, int which) {
-//								Locale locale = getResources().getConfiguration().locale;
-//								if (which == 0) {
-//									isChinese = 0;
-//									mBtnLanguage.setText("中文");
-//									setLang(locale.SIMPLIFIED_CHINESE);
-//								} else if (which == 1) {
-//									isChinese = 1;
-//									mBtnLanguage.setText("English");
-//									setLang(locale.US);
-//								}
-//							}
-//						}).show();
-//			}
-//		});
-		
+		// mBtnLanguage.setOnClickListener(new OnClickListener() {
+		// @Override
+		// public void onClick(View v) {
+		// new AlertDialog.Builder(context).setTitle(R.string.language_change)
+		// .setItems(R.array.language, new DialogInterface.OnClickListener() {
+		//
+		// @Override
+		// public void onClick(DialogInterface dialog, int which) {
+		// Locale locale = getResources().getConfiguration().locale;
+		// if (which == 0) {
+		// isChinese = 0;
+		// mBtnLanguage.setText("中文");
+		// setLang(locale.SIMPLIFIED_CHINESE);
+		// } else if (which == 1) {
+		// isChinese = 1;
+		// mBtnLanguage.setText("English");
+		// setLang(locale.US);
+		// }
+		// }
+		// }).show();
+		// }
+		// });
+
 	}
-	
+
 	public void setLang(Locale locale) {
 		// 获得res资源对象
 		Resources resources = getResources();
@@ -167,83 +170,85 @@ public class LoginActivity extends Activity implements OnClickListener {
 						+ getUserPwd, null);
 
 			} else {
-				//Toast.makeText(context, R.string.net_no, Toast.LENGTH_SHORT).show();
+				// Toast.makeText(context, R.string.net_no,
+				// Toast.LENGTH_SHORT).show();
 			}
 			break;
 		}
 	}
+
 	/***
 	 * 获取版本号 判断程序是否需要更新
 	 */
-	private void HttpGetVersion(String url, RequestParams params){
+	private void HttpGetVersion(String url, RequestParams params) {
 		AsyncHttpClient client = new AsyncHttpClient();
 		client.get(url, null, new AsyncHttpResponseHandler() {
-			
+
 			@Override
 			public void onSuccess(int arg0, Header[] arg1, byte[] arg2) {
-				if(arg0==200){
+				if (arg0 == 200) {
 					try {
 						JSONObject object = new JSONObject(new String(arg2));
 						String version = object.optString("version");
-						//获取当前版本号 判断程序是否需要更新
+						// 获取当前版本号 判断程序是否需要更新
 						PackageInfo pi = content.getPackageManager().getPackageInfo(content.getPackageName(), 0);
 						String versionName = pi.versionName;
-						//更新的内容
+						// 更新的内容
 						String message = object.optString("remark");
-						//更新的文件大小
+						// 更新的文件大小
 						String size = object.optString("fsize");
-						//获得需要更新的地址
+						// 获得需要更新的地址
 						String url = object.optString("apkurl");
-						Log.e("tag", "最新版本为"+version+"  当前版本为"+versionName);
-						if(Double.valueOf(version)>Double.valueOf(versionName))
-						{
-							ShowDialog(url,message);
+						Log.e("tag", "最新版本为" + version + "  当前版本为" + versionName);
+						if (Double.valueOf(version) > Double.valueOf(versionName)) {
+							ShowDialog(url, message);
 						}
 					} catch (Exception e) {
-						
+
 						e.printStackTrace();
 					}
 				}
 			}
-			private void ShowDialog(final String url,String message) {
+
+			private void ShowDialog(final String url, String message) {
 				Log.e("tag", "程序需要更新");
-				//弹出dialog是否需要更新
-				String[] mess=message.split("。");
+				// 弹出dialog是否需要更新
+				String[] mess = message.split("。");
 				String content = "";
 				for (String string : mess) {
-					content+=string+"\n";
+					content += string + "\n";
 				}
-				new AlertDialog.Builder(context)
-				.setTitle(R.string.update)
-				.setMessage(content)
-				.setPositiveButton(R.string.yes,new DialogInterface.OnClickListener() {
-					@Override
-					public void onClick(DialogInterface dialog, int which) {
-						
-						Intent intent = new Intent(LoginActivity.this, LogoServer.class);
-						//标记
-						intent.putExtra("flage","1");
-						intent.putExtra("apkurl", Constant.LOGIN_LOGO.concat(url));
-						startService(intent);
-					}
-				})
-				.setNegativeButton(R.string.no, null)
-				.show();
+				new AlertDialog.Builder(context).setTitle(R.string.update).setMessage(content)
+						.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
+							@Override
+							public void onClick(DialogInterface dialog, int which) {
+
+								Intent intent = new Intent(LoginActivity.this, LogoServer.class);
+								// 标记
+								intent.putExtra("flage", "1");
+								intent.putExtra("apkurl", Constant.LOGIN_LOGO.concat(url));
+								startService(intent);
+							}
+						}).setNegativeButton(R.string.no, null).show();
 			}
+
 			@Override
 			public void onFailure(int arg0, Header[] arg1, byte[] arg2, Throwable arg3) {
-				
+
 			}
 		});
 	}
+
 	/**
 	 * 网络Get 请求
 	 * 
 	 * @param url
 	 * @param params
-	 * 	// {"ip":"http://203.191.147.81:8011/bms","webappurl":"http://203.191.147.81/BMSystem",
-	 * "orgid":"1","indexpage":"home.html","userid":"1011","nodeid":"0","orgname":"普禄科智能检测设备有限公司",
-	// "logourl":"bmcp/logopng/logo.png","linkman":"莫志忠","telnum":"0755-26805755"}
+	 *            //
+	 *            {"ip":"http://203.191.147.81:8011/bms","webappurl":"http://203.191.147.81/BMSystem",
+	 *            "orgid":"1","indexpage":"home.html","userid":"1011","nodeid":"0","orgname":"普禄科智能检测设备有限公司",
+	 *            //
+	 *            "logourl":"bmcp/logopng/logo.png","linkman":"莫志忠","telnum":"0755-26805755"}
 	 */
 	private void HttpGetData(final String url, final RequestParams params) {
 		HttpReustClient.getLogin(url, params, new AsyncHttpResponseHandler() {
@@ -252,7 +257,7 @@ public class LoginActivity extends Activity implements OnClickListener {
 				Log.e("2", "登陆参数：" + new String(arg2));
 				if (arg0 == 200) {
 					String str = new String(arg2);
-					Log.e("tag", arg0+"请求数据成功");
+					Log.e("tag", arg0 + "请求数据成功");
 					try {
 						JSONObject object = new JSONObject(str);
 						nodid = object.getString("userid");
@@ -260,15 +265,15 @@ public class LoginActivity extends Activity implements OnClickListener {
 						LogoUser(object);
 						// Constant.BATTERY_BASIC_ADDRESS = basic_ip;
 						initJump(true);
-						String imageUri =LogoUser.getInstance().getLogourl();
-						//判断logo是否存在
-						if(!new File(Constant.LOGOIMAGE+"/"+imageUri.substring(imageUri.lastIndexOf("/")+1)).exists())
-						{
-						Intent intent = new Intent(LoginActivity.this, LogoServer.class);
-						//标记
-						intent.putExtra("flage", "2");
-						intent.putExtra("image", Constant.LOGIN_LOGO+object.getString("logourl"));
-						startService(intent);
+						String imageUri = LogoUser.getInstance().getLogourl();
+						// 判断logo是否存在
+						if (!new File(Constant.LOGOIMAGE + "/" + imageUri.substring(imageUri.lastIndexOf("/") + 1))
+								.exists()) {
+							Intent intent = new Intent(LoginActivity.this, LogoServer.class);
+							// 标记
+							intent.putExtra("flage", "2");
+							intent.putExtra("image", Constant.LOGIN_LOGO + object.getString("logourl"));
+							startService(intent);
 						}
 					} catch (JSONException e) {
 						e.printStackTrace();
@@ -278,6 +283,7 @@ public class LoginActivity extends Activity implements OnClickListener {
 					Toast.makeText(context, R.string.FAIL, Toast.LENGTH_SHORT).show();
 				}
 			}
+
 			@Override
 			public void onFailure(int arg0, Header[] arg1, byte[] arg2, Throwable arg3) {
 				// Log.e("2", "登陆失败：" + new String(arg2));
@@ -295,6 +301,7 @@ public class LoginActivity extends Activity implements OnClickListener {
 		share.addString("userPwd", getUserPwd);
 		share.addBoolean("loginStatus", loginStatus);
 	}
+
 	/*-*
 	 * 获取登录返回的信信息
 	 */
@@ -311,6 +318,7 @@ public class LoginActivity extends Activity implements OnClickListener {
 		user.setIndexpage(object.getString("indexpage"));
 		user.setNodeid(object.getString("nodeid"));
 	}
+
 	/**
 	 * 显示 用户名 密码
 	 */
@@ -321,6 +329,7 @@ public class LoginActivity extends Activity implements OnClickListener {
 			savePwd.setChecked(share.getShareBoolean("loginStatus"));
 		}
 	}
+
 	/**
 	 * 跳转的界面
 	 */
@@ -339,6 +348,18 @@ public class LoginActivity extends Activity implements OnClickListener {
 		}
 	}
 
+	private boolean isZh() {
+		Locale locale = getResources().getConfiguration().locale;
+		String language = locale.getLanguage();
+		if (language.endsWith("zh")) {
+			setLang(locale.SIMPLIFIED_CHINESE);
+			return true;
+		} else {
+			setLang(locale.US);
+			return false;
+		}
+	}
+
 	/**
 	 * 手机返回 键监听
 	 */
@@ -350,6 +371,7 @@ public class LoginActivity extends Activity implements OnClickListener {
 		}
 		return super.onKeyDown(keyCode, event);
 	}
+
 	/**
 	 * 手机返回 键监听
 	 */

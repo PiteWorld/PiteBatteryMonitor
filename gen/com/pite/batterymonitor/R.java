@@ -2796,7 +2796,7 @@ containing a value of this type.
         public static final int R_max=0x7f0a007a;
         public static final int R_max2=0x7f0a007b;
         public static final int R_mean=0x7f0a0081;
-        public static final int R_monitor=0x7f0a010f;
+        public static final int R_monitor=0x7f0a0110;
         public static final int Real_time_Info=0x7f0a00ef;
         public static final int SEND_LONG_TIME=0x7f0a005b;
         public static final int SET_FAIL=0x7f0a0059;
@@ -2809,20 +2809,20 @@ containing a value of this type.
         public static final int Thrend_btn=0x7f0a0021;
         public static final int Trend_data=0x7f0a0023;
         public static final int Trend_datas=0x7f0a00f0;
-        public static final int UMAppUpdate=0x7f0a0128;
-        public static final int UMBreak_Network=0x7f0a0120;
-        public static final int UMDialog_InstallAPK=0x7f0a012c;
-        public static final int UMGprsCondition=0x7f0a0126;
-        public static final int UMIgnore=0x7f0a012a;
-        public static final int UMNewVersion=0x7f0a0122;
-        public static final int UMNotNow=0x7f0a0129;
-        public static final int UMTargetSize=0x7f0a0125;
-        public static final int UMToast_IsUpdating=0x7f0a012b;
-        public static final int UMUpdateCheck=0x7f0a012d;
-        public static final int UMUpdateContent=0x7f0a0123;
-        public static final int UMUpdateNow=0x7f0a0127;
-        public static final int UMUpdateSize=0x7f0a0124;
-        public static final int UMUpdateTitle=0x7f0a0121;
+        public static final int UMAppUpdate=0x7f0a0129;
+        public static final int UMBreak_Network=0x7f0a0121;
+        public static final int UMDialog_InstallAPK=0x7f0a012d;
+        public static final int UMGprsCondition=0x7f0a0127;
+        public static final int UMIgnore=0x7f0a012b;
+        public static final int UMNewVersion=0x7f0a0123;
+        public static final int UMNotNow=0x7f0a012a;
+        public static final int UMTargetSize=0x7f0a0126;
+        public static final int UMToast_IsUpdating=0x7f0a012c;
+        public static final int UMUpdateCheck=0x7f0a012e;
+        public static final int UMUpdateContent=0x7f0a0124;
+        public static final int UMUpdateNow=0x7f0a0128;
+        public static final int UMUpdateSize=0x7f0a0125;
+        public static final int UMUpdateTitle=0x7f0a0122;
         public static final int U_High=0x7f0a007c;
         public static final int U_average=0x7f0a007f;
         public static final int U_low=0x7f0a007d;
@@ -2972,9 +2972,11 @@ containing a value of this type.
         public static final int string106=0x7f0a00ec;
         public static final int string107=0x7f0a00ed;
         public static final int string11=0x7f0a00a6;
-        /**  Ua(V)	Ub(V)	Uc(V)	Ia(A)	Ia(A)	Ia(A)	
+        /** 
+           Ua(V)	Ub(V)	Uc(V)	Ia(A)	Ia(A)	Ia(A)	
 			La(%)	Lb(%)	Lc(%)	Pa(kW)	Pa(kW)	Pa(kW)	
-			Sa(kVA)	Sa(kVA)	Sa(kVA)	Pfb	Pfb	Pfc 
+			Sa(kVA)	Sa(kVA)	Sa(kVA)	Pfb	Pfb	Pfc
+    
  Ua(V)	Ub(V)	Uc(V)	Ia(A)	Ia(A)	Ia(A)	
 			La(%)	Lb(%)	Lc(%)	Pa(kW)	Pa(kW)	Pa(kW)	
 			Sa(kVA)	Sa(kVA)	Sa(kVA)	Pfb	Pfb	Pfc 
@@ -3081,10 +3083,11 @@ containing a value of this type.
         public static final int string8=0x7f0a00a3;
         public static final int string9=0x7f0a00a4;
         public static final int sydl=0x7f0a0072;
-        public static final int tb_munion_tip_download_prefix=0x7f0a0110;
+        public static final int tb_munion_tip_download_prefix=0x7f0a0111;
         public static final int telnum=0x7f0a0092;
         public static final int time=0x7f0a0089;
         public static final int title_activity_bypmain=0x7f0a010c;
+        public static final int title_activity_langues=0x7f0a010f;
         public static final int title_activity_loadmain=0x7f0a0107;
         public static final int title_activity_login=0x7f0a0016;
         public static final int title_activity_menu=0x7f0a0015;
@@ -3099,21 +3102,21 @@ containing a value of this type.
         public static final int title_activity_waring=0x7f0a008a;
         public static final int total_current=0x7f0a0078;
         public static final int total_voltage=0x7f0a0079;
-        public static final int umeng_common_action_cancel=0x7f0a0115;
-        public static final int umeng_common_action_continue=0x7f0a0114;
-        public static final int umeng_common_action_info_exist=0x7f0a0111;
-        public static final int umeng_common_action_pause=0x7f0a0113;
-        public static final int umeng_common_download_failed=0x7f0a011b;
-        public static final int umeng_common_download_finish=0x7f0a011c;
-        public static final int umeng_common_download_notification_prefix=0x7f0a0116;
-        public static final int umeng_common_icon=0x7f0a011f;
-        public static final int umeng_common_info_interrupt=0x7f0a0112;
-        public static final int umeng_common_network_break_alert=0x7f0a011a;
-        public static final int umeng_common_patch_finish=0x7f0a011d;
-        public static final int umeng_common_pause_notification_prefix=0x7f0a0117;
-        public static final int umeng_common_silent_download_finish=0x7f0a011e;
-        public static final int umeng_common_start_download_notification=0x7f0a0118;
-        public static final int umeng_common_start_patch_notification=0x7f0a0119;
+        public static final int umeng_common_action_cancel=0x7f0a0116;
+        public static final int umeng_common_action_continue=0x7f0a0115;
+        public static final int umeng_common_action_info_exist=0x7f0a0112;
+        public static final int umeng_common_action_pause=0x7f0a0114;
+        public static final int umeng_common_download_failed=0x7f0a011c;
+        public static final int umeng_common_download_finish=0x7f0a011d;
+        public static final int umeng_common_download_notification_prefix=0x7f0a0117;
+        public static final int umeng_common_icon=0x7f0a0120;
+        public static final int umeng_common_info_interrupt=0x7f0a0113;
+        public static final int umeng_common_network_break_alert=0x7f0a011b;
+        public static final int umeng_common_patch_finish=0x7f0a011e;
+        public static final int umeng_common_pause_notification_prefix=0x7f0a0118;
+        public static final int umeng_common_silent_download_finish=0x7f0a011f;
+        public static final int umeng_common_start_download_notification=0x7f0a0119;
+        public static final int umeng_common_start_patch_notification=0x7f0a011a;
         public static final int update=0x7f0a008f;
         public static final int voltageAnalysisAD=0x7f0a0084;
         public static final int xunjian=0x7f0a0071;

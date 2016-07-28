@@ -175,7 +175,6 @@
     <string name="string70">有功功率(P)</string>
     <string name="string71">视在功率(P)</string>
     <string name="string72">功率因数</string>
-    
     <string name="string31">负载(%)</string>
     <string name="string32">P(kW)</string>
     <string name="string33">S(kVA)</string>
@@ -218,45 +217,41 @@
     <string name="string68">谷</string>
     <string name="string100">未知</string>
     <string name="string101">电池告警信息</string>
-     <string name="string102">累计输出总电费</string>
-     <string name="string103">处理</string>
-     <string name="string104">是否处理该事件？</string>
-     <string name="string105">批量处理</string>
-     <string name="string106">全选</string>
-     <string name="string107">请至少选择一个处理条目！</string>
-     <string name="Load_end">--已完成加载！--</string>
-     <string name="Real_time_Info">实时信息</string>
-      <string name="Trend_datas">趋势数据</string>
-      <string name="Stored_daily">日报</string>
-      <string name="Stored_monthly">月报</string>
-     <string name="date">日期</string>
-      <!-- Ua(V)	Ub(V)	Uc(V)	Ia(A)	Ia(A)	Ia(A)	
+    <string name="string102">累计输出总电费</string>
+    <string name="string103">处理</string>
+    <string name="string104">是否处理该事件？</string>
+    <string name="string105">批量处理</string>
+    <string name="string106">全选</string>
+    <string name="string107">请至少选择一个处理条目！</string>
+    <string name="Load_end">--已完成加载！--</string>
+    <string name="Real_time_Info">实时信息</string>
+    <string name="Trend_datas">趋势数据</string>
+    <string name="Stored_daily">日报</string>
+    <string name="Stored_monthly">月报</string>
+    <string name="date">日期</string>
+    <!--
+           Ua(V)	Ub(V)	Uc(V)	Ia(A)	Ia(A)	Ia(A)	
 			La(%)	Lb(%)	Lc(%)	Pa(kW)	Pa(kW)	Pa(kW)	
-			Sa(kVA)	Sa(kVA)	Sa(kVA)	Pfb	Pfb	Pfc -->
+			Sa(kVA)	Sa(kVA)	Sa(kVA)	Pfb	Pfb	Pfc
+    -->
     <string name="string120">Ua(V)</string>
     <string name="string121">Ub(V)</string>
     <string name="string122">Uc(V)</string>
-    
     <string name="string123">Ia(A)</string>
     <string name="string124">Ib(A)</string>
     <string name="string125">Ic(A)</string>
-    
     <string name="string126">La(%)</string>
     <string name="string127">Lb(%)</string>
     <string name="string128">Lc(%)</string>
-    
     <string name="string129">Pa(kW)</string>
     <string name="string130">PbkW)</string>
     <string name="string131">Pc(kW)</string>
-    
     <string name="string132">Sa(kVA)</string>
     <string name="string133">Sb(kVA)</string>
     <string name="string134">Sc(kVA)</string>
-    
     <string name="string135">Pfa</string>
     <string name="string136">Pfb</string>
     <string name="string137">Pfc</string>
-    
     <string name="title_activity_mianmain">MIANMainActivity</string>
     <string name="title_activity_loadmain">LOADMainActivity</string>
     <string name="load_title">系统输出</string>
@@ -266,5 +261,6 @@
     <string name="title_activity_bypmain">BYPMainActivity</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_statemain">STATEMainActivity</string>
+    <string name="title_activity_langues">LanguesActivity</string>
 
 </resources>
