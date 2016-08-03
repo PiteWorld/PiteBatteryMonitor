@@ -79,8 +79,9 @@ public class PostionActivity extends AbActivity implements LocationSource, OnRou
 		longitude = getIntent().getStringExtra("longitude");
 		// Î³¶È
 		latitude = getIntent().getStringExtra("latitude");
-		endPoint = new LatLonPoint(Double.valueOf(latitude), Double.valueOf(longitude));
+		//endPoint = new LatLonPoint(Double.valueOf(latitude), Double.valueOf(longitude));
 		//endPoint = new LatLonPoint(22.490282,113.900734);
+		endPoint = new LatLonPoint(15.45,47.57);
 		init();
 		btnHome.setOnClickListener(new OnClickListener() {
 			@Override

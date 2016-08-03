@@ -36,10 +36,15 @@ import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.AdapterView.OnItemSelectedListener;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -55,17 +60,24 @@ public class LoginActivity extends Activity implements OnClickListener {
 	private String getUserName, getUserPwd; // 获取输入 用户名密码
 	private boolean loginStatus; // 记住密码状态
 	private TextView piteVersion; // 程序版本号
-	// private Button mBtnLanguage;
+    private Button mBtnLanguage;
 	public static int isChinese = 0; // 中英文选择
 	public static String nodid = null; //
 	public static String basic_ip;
 	public Context content;
+	public String str = null;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_login);
-		isChinese = getIntent().getIntExtra("lage", 0);
-//		Log.e("2", "isChinese  "+isChinese);
+		if (isChinese == 0) {
+			isChinese = getIntent().getIntExtra("lage", 0);
+			str = "chinese";
+		}
+		if(isChinese==1) {
+			isChinese = getIntent().getIntExtra("lage", 1);
+			str = "english";
+		}
 		content = this;
 		UmengUpdateAgent.setUpdateOnlyWifi(false);
 		UmengUpdateAgent.update(this);
@@ -78,7 +90,8 @@ public class LoginActivity extends Activity implements OnClickListener {
 		// i.setDataAndType(Uri.parse("file://" + apkfile.toString()),
 		// "application/vnd.android.package-archive");
 		// context.startActivity(i);
-
+		Log.e("tag", "str      ............."+ str);
+		Log.e("tag", "isChinese............."+ isChinese);
 		HttpGetVersion(Constant.LOGIN_LOGOADSS.concat(Constant.GETVERSION_NAME), null);
 	}
 
@@ -88,7 +101,7 @@ public class LoginActivity extends Activity implements OnClickListener {
 		InputMethodService input = new InputMethodService();
 		context = LoginActivity.this;
 		share = new ShareXML(context);
-		// mBtnLanguage = (Button) this.findViewById(R.id.sp_language);
+	    mBtnLanguage = (Button) this.findViewById(R.id.sp_language);
 		userName = (TextView) this.findViewById(R.id.login_name);
 		userPwd = (TextView) this.findViewById(R.id.login_pwd);
 		loginBtn = (Button) this.findViewById(R.id.login_btn);
@@ -117,31 +130,38 @@ public class LoginActivity extends Activity implements OnClickListener {
 			}
 		});
 		showXML();// 显示用户密码
-		// mBtnLanguage.setOnClickListener(new OnClickListener() {
-		// @Override
-		// public void onClick(View v) {
-		// new AlertDialog.Builder(context).setTitle(R.string.language_change)
-		// .setItems(R.array.language, new DialogInterface.OnClickListener() {
-		//
-		// @Override
-		// public void onClick(DialogInterface dialog, int which) {
-		// Locale locale = getResources().getConfiguration().locale;
-		// if (which == 0) {
-		// isChinese = 0;
-		// mBtnLanguage.setText("中文");
-		// setLang(locale.SIMPLIFIED_CHINESE);
-		// } else if (which == 1) {
-		// isChinese = 1;
-		// mBtnLanguage.setText("English");
-		// setLang(locale.US);
-		// }
-		// }
-		// }).show();
-		// }
-		// });
-
-	}
-
+		mBtnLanguage.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				new AlertDialog.Builder(context).setTitle(R.string.language_change)// R.array.language,
+						.setItems(R.array.language, new DialogInterface.OnClickListener() {
+							@Override
+							public void onClick(DialogInterface dialog, int which) {
+								Locale locale = getResources().getConfiguration().locale;
+								if (which == 0) {
+									isChinese = 0;
+									Log.e("tag", which +     "...which     0...");
+									Log.e("tag", isChinese + "...isChinese 0...");
+										if (isChinese == 0) {
+											  mBtnLanguage.setText("中文");
+											  setLang(locale.SIMPLIFIED_CHINESE);
+										}
+								} else if (which == 1) {
+									 	 isChinese = 1;
+										    if (isChinese == 1) {
+										    	Log.e("tag", which +     "... which     1...");
+											 	Log.e("tag", isChinese + "....isChinese 1...");
+											    mBtnLanguage.setText("English");
+											    setLang(locale.US);
+											}
+								}
+							}
+				}).show();
+			}
+	});
+		
+	
+}
 	public void setLang(Locale locale) {
 		// 获得res资源对象
 		Resources resources = getResources();
@@ -155,9 +175,11 @@ public class LoginActivity extends Activity implements OnClickListener {
 		// 刷新activity才能马上奏效
 		finish();
 		startActivity(new Intent().setClass(LoginActivity.this, LoginActivity.class));
-		// LoginActivity.this.finish();
+		//LoginActivity.this.finish();
 	}
-
+/**
+ *   登录操作
+ */
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.login_btn: // 登陆
@@ -167,8 +189,7 @@ public class LoginActivity extends Activity implements OnClickListener {
 				getUserPwd = userPwd.getText().toString().trim();
 				// }
 				HttpGetData(Constant.BATTERY_BASIC_ADDRESS_LOGIN + Constant.BATTERY_BASIC_LOGIN + getUserName + "/"
-						+ getUserPwd, null);
-
+						+ getUserPwd + "/" +str , null);
 			} else {
 				// Toast.makeText(context, R.string.net_no,
 				// Toast.LENGTH_SHORT).show();
@@ -200,6 +221,7 @@ public class LoginActivity extends Activity implements OnClickListener {
 						// 获得需要更新的地址
 						String url = object.optString("apkurl");
 						Log.e("tag", "最新版本为" + version + "  当前版本为" + versionName);
+						Log.e("tag", "更新内容" + message + "  软件大小" + size);
 						if (Double.valueOf(version) > Double.valueOf(versionName)) {
 							ShowDialog(url, message);
 						}
@@ -209,7 +231,6 @@ public class LoginActivity extends Activity implements OnClickListener {
 					}
 				}
 			}
-
 			private void ShowDialog(final String url, String message) {
 				Log.e("tag", "程序需要更新");
 				// 弹出dialog是否需要更新
@@ -347,19 +368,6 @@ public class LoginActivity extends Activity implements OnClickListener {
 			LoginActivity.this.finish();
 		}
 	}
-
-	private boolean isZh() {
-		Locale locale = getResources().getConfiguration().locale;
-		String language = locale.getLanguage();
-		if (language.endsWith("zh")) {
-			setLang(locale.SIMPLIFIED_CHINESE);
-			return true;
-		} else {
-			setLang(locale.US);
-			return false;
-		}
-	}
-
 	/**
 	 * 手机返回 键监听
 	 */

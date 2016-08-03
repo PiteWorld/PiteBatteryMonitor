@@ -490,7 +490,6 @@ public class TrendFragment extends Fragment {
 	 * ÉèÖÃÇ÷ÊÆÍ¼
 	 */
 	int a = 0;
-
 	private void generateDataUI(List<ChartLineDataUI> listvalues, MyLineChartView chart, int numberOfLines, int point) {
 		float[] f = new float[point];
 		int max = 0;

@@ -252,6 +252,8 @@
     <string name="string135">Pfa</string>
     <string name="string136">Pfb</string>
     <string name="string137">Pfc</string>
+    <string name="string138">累计收益</string>
+    
     <string name="title_activity_mianmain">MIANMainActivity</string>
     <string name="title_activity_loadmain">LOADMainActivity</string>
     <string name="load_title">系统输出</string>

@@ -39,4 +39,13 @@
         android:layout_weight="1"
         android:layout_width="60dp"
         android:background="@drawable/content_cell"/>
+       
+       <View android:layout_height="match_parent"
+        android:layout_width="1dp"
+        android:background="@drawable/line"/>
+     <TextView android:id="@+id/energ_item6"
+        style="@style/testtitlestyle"
+        android:layout_weight="1"
+        android:layout_width="60dp"
+        android:background="@drawable/content_cell"/>
 </LinearLayout>

@@ -218,11 +218,6 @@ public class TrendDataFragment extends Fragment {
 							HttpGetDataTrend(str.toString(), null, 1);
 							// 最后一页 ，下次不刷新
 							islast = true;
-							//如果返回值为-1则引用此布局
-							if(RecordCount==-1){
-								islast = false;
-								listView.inflate(getActivity(), R.layout.refresh_listview_end, null);	
-							}
 						}
 					} else {
 						listView.onRefreshComplete(true);

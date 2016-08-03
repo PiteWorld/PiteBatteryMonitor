@@ -105,13 +105,14 @@
             android:gravity="bottom"
             android:text="@string/save_pwd"
             android:textColor="@color/heise" />
-
+         
+        <!--  设置button可见不可见 android:visibility="gone" -->
+        
         <Button
             android:id="@+id/sp_language"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:visibility="gone"
             android:background="@android:color/transparent"
             android:text="@string/language_change" />
     </LinearLayout>

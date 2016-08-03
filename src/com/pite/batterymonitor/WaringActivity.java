@@ -192,12 +192,12 @@ public class WaringActivity extends Activity implements OnClickListener, OnItemC
 			war_station.setText(warheadjson.getNodeName());
 			war_type.setText(warheadjson.getTypename());
 			war_u_top_limit.setText(getText(warheadjson.getUH()) + "V");
-			war_temper_top_limit.setText(warheadjson.getTH() + "℃");
+			war_temper_top_limit.setText((warheadjson.getTH()+ "").substring(0,(Integer)warheadjson.getTH().indexOf("."))+ "℃");
 			war_r_relpace.setText(getText(warheadjson.getRH()) + "mΩ");
 			war_group_name.setText(warheadjson.getGroupName());
 			war_min_r.setText(getText(warheadjson.getNominalr()) + "mΩ");
 			war_u_limit.setText(getText(warheadjson.getUL()) + "V");
-			war_temper_limit.setText(warheadjson.getTL() + "℃");
+			war_temper_limit.setText((warheadjson.getTL() + "").substring(0,(Integer)warheadjson.getTL().indexOf("."))+ "℃");
 			war_r_waring.setText(getText(warheadjson.getRL()) + "mΩ");
 		}
 	}
@@ -208,21 +208,18 @@ public class WaringActivity extends Activity implements OnClickListener, OnItemC
 	 * @param str
 	 * @return
 	 */
-	private String getText(String str) {
+	private String getText
+	(String str) {
 		DecimalFormat df = new DecimalFormat("#0.00");
 		return df.format(Double.valueOf(str));
 	}
 	/**
 	 * 保留整数位
 	 */
-//	 public String stringToInt(String str){
-//		 BigDecimal a= new BigDecimal("#0.00");
-//		 a.setScale(0,BigDecimal.ROUND_UP);
-//		 
-//			return  a.setScale(0,BigDecimal.ROUND_UP);
-//
+//	 public String getText2(String str){
+//		 BigDecimal bd=new BigDecimal("#00.00");
+//			return bd.setScale(0, BigDecimal.ROUND_HALF_UP)+"";
 //	   }
-
 	
 	boolean ischeck = true;
 

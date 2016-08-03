@@ -8,10 +8,13 @@ import org.apache.http.Header;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
+import com.pite.batterymonitor.LoginActivity;
 import com.pite.batterymonitor.PacketActivity;
 import com.pite.batterymonitor.R;
+import com.pite.batterymonitor.TestTypeActivity;
 import com.pite.batterymonitor.constant.Constant;
 import com.pite.batterymonitor.jsontool.JsonTools;
+import com.pite.batterymonitor.utils.ChartsUtils;
 import com.pite.batterymonitor.utils.PCSInfos;
 
 import android.content.Context;
@@ -23,6 +26,7 @@ import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Toast;
 	/**
 	 * pcs主界面
 	 * @author Administrator
@@ -59,7 +63,7 @@ public class PCSMainActivity extends BaseActivity {
 		content = PCSMainActivity.this;
 		setTitie(R.string.hello_world);
 		setVisibility(View.GONE);
-		HttpGetData(Constant.PSCURL+ PacketActivity.packetgroupid,null);
+	    HttpGetData(Constant.PSCURL+ PacketActivity.packetgroupid,null);
 		// 获取屏幕分辨率
 		DisplayMetrics metrics = new DisplayMetrics();
 		getWindowManager().getDefaultDisplay().getMetrics(metrics);
@@ -102,30 +106,7 @@ public class PCSMainActivity extends BaseActivity {
 			}
 		};
 	}
-	/**
-	 * 弹出dialog
-	 *//*
-	private void showDialog() {
-		view = LayoutInflater.from(PCSMainActivity.this).inflate(R.layout.dialog, null);
-		name = (EditText) view.findViewById(R.id.name);
-		psd = (EditText) view.findViewById(R.id.psd);
-		new AlertDialog.Builder(PCSMainActivity.this).setTitle(R.string.pointInfo).setView(view)
-				.setNegativeButton(R.string.no, null)
-				.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-
-			@Override
-			public void onClick(DialogInterface dialog, int which) {
-				username = name.getText().toString().trim();
-				userpsd = psd.getText().toString().trim();
-				if (username.equals("1") && userpsd.equals("1")) {
-					// 跳入设置页面
-
-				} else
-					Toast.makeText(PCSMainActivity.this, R.string.error, Toast.LENGTH_SHORT).show();
-			}
-		}).create().show();
-		;
-	}*/
+	
 	/***
 	 * 请求数据
 	 * @param url

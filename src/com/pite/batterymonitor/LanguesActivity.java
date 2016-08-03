@@ -29,10 +29,10 @@ public class LanguesActivity extends Activity {
 		Locale locale = getResources().getConfiguration().locale;
 		String language = locale.getLanguage();
 		if (language.endsWith("zh")) {
-			setLang(locale.SIMPLIFIED_CHINESE);
+			//setLang(locale.SIMPLIFIED_CHINESE);
 			return true;
 		} else {
-			setLang(locale.US);
+			//setLang(locale.US);
 			return false;
 		}
 	}

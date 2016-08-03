@@ -57,6 +57,11 @@
             android:text="@string/string102"
             android:layout_weight="1"
             android:background="@drawable/title_cell"/>
+         <TextView style="@style/testtitlestyle"
+            android:text="@string/string138"
+            android:layout_weight="1"
+            android:background="@drawable/title_cell"/>
+        
     </LinearLayout>
 
     <ListView

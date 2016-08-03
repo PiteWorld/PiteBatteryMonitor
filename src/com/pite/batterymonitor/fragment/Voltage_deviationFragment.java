@@ -38,7 +38,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 /**
- * 电压均差分析
+ * 电压  均差分析
  * @author Administrator
  *
  */

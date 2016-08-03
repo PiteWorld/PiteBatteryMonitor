@@ -37,7 +37,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 /**
- * 电池 电阻分析
+ * 电池 内阻分析
  * @author Administrator
  *
  */

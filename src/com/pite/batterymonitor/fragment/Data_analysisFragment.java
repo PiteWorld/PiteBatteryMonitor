@@ -33,7 +33,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 /**
- * 直方数据分析
+ * 直方  数据分析
  * 
  * @author Administrator
  *

@@ -46,6 +46,7 @@ public class EnergfmAdapter extends BaseAdapter {
 			holder.energ_item3 = (TextView) convertView.findViewById(R.id.energ_item3);
 			holder.energ_item4 = (TextView) convertView.findViewById(R.id.energ_item4);
 			holder.energ_item5 = (TextView) convertView.findViewById(R.id.energ_item5);
+			holder.energ_item6 = (TextView) convertView.findViewById(R.id.energ_item6);
 			convertView.setTag(holder);
 		}
 		else
@@ -55,9 +56,12 @@ public class EnergfmAdapter extends BaseAdapter {
 		holder.energ_item3.setText(list.get(0));
 		holder.energ_item4.setText(list.get(0));
 		holder.energ_item5.setText(list.get(0));
+		holder.energ_item6.setText(list.get(0));
+		
+		
 		return convertView;
 	}
 	class ViewHolder{
-		private TextView energ_item1,energ_item2,energ_item3,energ_item4,energ_item5;
+		private TextView energ_item1,energ_item2,energ_item3,energ_item4,energ_item5,energ_item6;
 	}
 }

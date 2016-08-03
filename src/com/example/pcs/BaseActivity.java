@@ -13,10 +13,12 @@ import com.google.gson.JsonParser;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
+import com.pite.batterymonitor.LoginActivity;
 import com.pite.batterymonitor.MenuActivity;
 import com.pite.batterymonitor.PacketActivity;
 import com.pite.batterymonitor.R;
 import com.pite.batterymonitor.constant.Constant;
+import com.pite.batterymonitor.utils.ChartsUtils;
 import com.pite.batterymonitor.utils.PCSInfos;
 
 import android.app.Activity;
@@ -31,7 +33,6 @@ import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.TextView;
 import android.widget.Toast;
-
 public abstract class  BaseActivity extends Activity{
 	private TextView title,time;//每个activity的标题
 	private LinearLayout content;//每个activity的布局内容
@@ -88,7 +89,6 @@ public abstract class  BaseActivity extends Activity{
 		}
 		return list;
 	}
-	
 	private void init() {
 		back = (ImageButton) findViewById(R.id.back);
 		base_home = (ImageButton) findViewById(R.id.base_home);
@@ -113,6 +113,7 @@ public abstract class  BaseActivity extends Activity{
 		//添加内容文件
 		LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
 		content.addView(getcontent(),params);
+		
 		HttpGetData(Constant.PSCURL+ PacketActivity.packetgroupid,null);
 	}
 	public abstract View getcontent() ;

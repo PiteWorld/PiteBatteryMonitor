@@ -6,163 +6,201 @@
     tools:context="com.example.pcs.LOADMainActivity" >
 
         <LinearLayout android:orientation="vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+          android:layout_width="wrap_content"
+            android:layout_height="match_parent">
 		<LinearLayout  
-		    android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+		  android:layout_width="match_parent"
+            android:layout_height="20dp"
             android:orientation="horizontal" >
    
         <TextView
             android:id="@+id/load_time"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_weight="1"
+            android:textSize="10sp"
+            android:gravity="center_horizontal"
             android:background="@drawable/title_cell"
             android:text="@string/ba_time"/>
 
         <TextView
             android:id="@+id/load_Ua"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+          android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_weight="1"
+			android:textSize="10sp"
+			android:gravity="center_horizontal"
             android:background="@drawable/title_cell"
             android:text="@string/string120" />
 
         <TextView
             android:id="@+id/load_Ub"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+          android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_weight="1"
+            android:textSize="10sp"
+            android:gravity="center_horizontal"
             android:background="@drawable/title_cell"
             android:text="@string/string121" />
 
         <TextView
             android:id="@+id/load_Uc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:background="@drawable/title_cell"
             android:layout_weight="1"
+            android:textSize="10sp"
+            android:gravity="center_horizontal"
             android:text="@string/string122" />
 
         <TextView
             android:id="@+id/load_Ia"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+          android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:background="@drawable/title_cell"
             android:layout_weight="1"
+            android:textSize="10sp"
+            android:gravity="center_horizontal"
             android:text="@string/string123" />
 
         <TextView
             android:id="@+id/load_Ib"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+          android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:background="@drawable/title_cell"
             android:layout_weight="1"
+            android:textSize="10sp"
+            android:gravity="center_horizontal"
             android:text="@string/string124" />
 
         <TextView
             android:id="@+id/load_Ic"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+          android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:background="@drawable/title_cell"
             android:layout_weight="1"
+            android:textSize="10sp"
+            android:gravity="center_horizontal"
             android:text="@string/string125" />
 
         <TextView
             android:id="@+id/load_La"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+          android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:background="@drawable/title_cell"
             android:layout_weight="1"
+            android:textSize="10sp"
+            android:gravity="center_horizontal"
             android:text="@string/string126" />
 
         <TextView
             android:id="@+id/load_Lb"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+          android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:background="@drawable/title_cell"
             android:layout_weight="1"
+            android:textSize="10sp"
+            android:gravity="center_horizontal"
             android:text="@string/string127" />
 
         <TextView
             android:id="@+id/load_Lc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+          android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:background="@drawable/title_cell"
             android:layout_weight="1"
+            android:textSize="10sp"
+             android:gravity="center_horizontal"
             android:text="@string/string128" />
 
         <TextView
             android:id="@+id/load_Pa"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+          android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:background="@drawable/title_cell"
             android:layout_weight="1"
+            android:textSize="10sp"
+            android:gravity="center_horizontal"
             android:text="@string/string129" />
 
         <TextView
             android:id="@+id/load_Pb"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+          android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:background="@drawable/title_cell"
             android:layout_weight="1"
+            android:textSize="10sp"
+            android:gravity="center_horizontal"
             android:text="@string/string130" />
 
         <TextView
             android:id="@+id/load_Pc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+          android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:background="@drawable/title_cell"
             android:layout_weight="1"
+            android:textSize="10sp"
+            android:gravity="center_horizontal"
             android:text="@string/string131" />
 
         <TextView
             android:id="@+id/load_Sa"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+          android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:background="@drawable/title_cell"
             android:layout_weight="1"
+            android:textSize="10sp"
+            android:gravity="center_horizontal"
             android:text="@string/string132" />
 
         <TextView
             android:id="@+id/load_Sb"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+          android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:background="@drawable/title_cell"
             android:layout_weight="1"
+            android:textSize="10sp"
+            android:gravity="center_horizontal"
             android:text="@string/string133" />
 
         <TextView
             android:id="@+id/load_Sc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+          android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:background="@drawable/title_cell"
             android:layout_weight="1"
+            android:textSize="10sp"
+            android:gravity="center_horizontal"
             android:text="@string/string134" />
 
         <TextView
             android:id="@+id/load_Pfa"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+          android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:background="@drawable/title_cell"
             android:layout_weight="1"
+            android:textSize="10sp"
+            android:gravity="center_horizontal"
             android:text="@string/string135" />
 
         <TextView
              android:id="@+id/load_Pfb"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+          android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:background="@drawable/title_cell"
             android:layout_weight="1"
+            android:textSize="10sp"
+            android:gravity="center_horizontal"
             android:text="@string/string136" />
 
         <TextView
              android:id="@+id/load_Pfc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+          android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:background="@drawable/title_cell"
             android:layout_weight="1"
+            android:textSize="10sp"
+            android:gravity="center_horizontal"
             android:text="@string/string137" />
         </LinearLayout>
   <ListView

@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.pite.batterymonitor.R;
-import com.pite.batterymonitor.adapter.BATAAdapter;
 import com.pite.batterymonitor.adapter.LoadAdapter;
 
 import android.app.Fragment;
